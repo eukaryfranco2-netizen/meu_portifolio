@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eukary Franco | Desenvolvedora Front-End</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="estilos/portifolio.css">
+
+</head>
+<body>
+
+  <!-- Forma do hexágono com pontas arredondadas (usada pelo clip-path da foto) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <clipPath id="hexagono-arredondado" clipPathUnits="objectBoundingBox">
+      <path d="M 0.22 0.104 Q 0.25 0.05 0.31 0.05 L 0.69 0.05
+               Q 0.75 0.05 0.78 0.104 L 0.97 0.446
+               Q 1 0.5 0.97 0.554 L 0.78 0.896
+               Q 0.75 0.95 0.69 0.95 L 0.31 0.95
+               Q 0.25 0.95 0.22 0.896 L 0.03 0.554
+               Q 0 0.5 0.03 0.446 Z"/>
+    </clipPath>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-conteudo">
+      <a href="#inicio" class="logo">
+        <span>Eukary <span class="destaque">Franco</span></span>
+      </a>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contato" class="botao botao-pequeno">Entre em contato</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-conteudo">
+        <div class="hero-texto esquerda-home">
+          <p class="saudacao">Olá, me chamo</p>
+          <h1>Eukary Franco</h1>
+          <h2>E sou <span class="habilidades">Desenvolvedora Front-End</span></h2>
+          <p class="descricao">
+            Apaixonada por criar experiências web bonitas, funcionais e intuitivas.
+            Transformando ideias em soluções digitais marcantes através de um código
+            eficiente. Unindo design e tecnologia para entregar resultados que fazem
+            a diferença.
+          </p>
+
+          <div class="hero-botoes">
+              <a href="#projetos" class="botao contorno">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="foto-moldura foto-hero direita-home">
+          <img src="img/imagem_perfil.png" alt="Foto de Eukary Franco">
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+      <div class="container sobre-conteudo">
+        <div class="foto-moldura foto-sobre esquerda-sobre">
+          <img src="img/imagem_perfil.png" alt="Foto de Eukary Franco">
+        </div>
+
+        <div class="sobre-texto direita-sobre">
+          <h2 class="titulo-secao">Sobre Mim</h2>
+          <p>
+            Sou uma Desenvolvedora Front-End e estou construindo minha jornada na
+            tecnologia através de projetos práticos. Gosto de transformar ideias em
+            interfaces modernas, funcionais e responsivas.
+          </p>
+          <p>
+            Atualmente, venho desenvolvendo minhas habilidades em HTML, CSS, Git e
+            GitHub, enquanto continuo explorando novas tecnologias e ferramentas para
+            evoluir como desenvolvedora.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="servicos">
+      <div class="container">
+        <h2 class="titulo-secao centro">Meus Serviços</h2>
+
+        <div class="cards">
+          <article class="card caixa-servico">
+            <i class="fa-solid fa-code"></i>
+            <h3>FrontEnd</h3>
+            <p>Já desenvolvi Landing Pages, utilizei APIs e framework</p>
+          </article>
+
+          <article class="card caixa-servico">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>Design Gráfico</h3>
+            <p>Edição de imagens, logos e banners. Utilizando o Adobe Photoshop</p>
+          </article>
+
+          <article class="card caixa-servico">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+            <p>Desenvolvimento de scripts, automação de tarefas e soluções eficientes em lógica de programação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÚLTIMOS PROJETOS -->
+    <section id="projetos" class="projetos">
+      <div class="container">
+        <h2 class="titulo-secao centro superior-portfolio">Últimos <span class="destaque">Projetos</span></h2>
+
+        <div class="projetos-grade">
+
+          <article class="projeto-card">
+            <div class="projeto-imagem">
+              <img src="img/projeto_1.png" alt="Captura de tela do Projeto 1">
+            </div>
+            <div class="projeto-info">
+              <h3>KuromyGames</h3>
+              <p>Landing page desenvolvida no Figma.</p>
+              <div class="projeto-links">
+                <a href="#" target="_blank" class="botao botao-pequeno">Ver projeto</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto-card">
+            <div class="projeto-imagem">
+              <img src="img/projeto_2.png" alt="Captura de tela do Projeto 2">
+            </div>
+            <div class="projeto-info">
+              <h3>Projeto BAND</h3>
+              <p>Site com JavaScript e interações dinâmicas.</p>
+              <div class="projeto-links">
+                <a href="#" target="_blank" class="botao botao-pequeno">Ver projeto</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto-card">
+            <div class="projeto-imagem">
+              <img src="img/projeto_3.png" alt="Captura de tela do Projeto 3">
+            </div>
+            <div class="projeto-info">
+              <h3>Villa D'Oro</h3>
+              <p>Site desenvolvido com HTML e CSS.
+              </p>
+              <div class="projeto-links">
+                <a href="#" target="_blank" class="botao botao-pequeno">Ver projeto</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Para adicionar mais projetos, copie um <article> inteiro e troque imagem, título e links -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONTATO / FOOTER -->
+  <footer id="contato" class="footer">
+    <div class="container">
+      <h2 class="titulo-secao centro">Vamos conversar?</h2>
+
+      <div class="footer-redes">
+        <a href="https://maileukaryfranco2@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/eukaryfranco2-netizen" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/eukary-franco-3351a73bb/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/euka_franco/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <p class="copyright">Copyright © 2026 Eukary Franco - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- 1) Bibliotecas primeiro  2) O seu script por último.
+       Com "defer" os scripts rodam NESSA ordem, depois que o HTML carregou. -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+  <script src="scripts/portifolio.js" defer></script>
+</body>
+</html>
