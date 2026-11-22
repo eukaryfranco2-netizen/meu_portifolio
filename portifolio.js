@@ -50,26 +50,11 @@ const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').m
 
 // Respeita quem desativou animações no sistema
 if (!reduzirMovimento) {
-    fotos.forEach((foto, i) => {
+    fotos.forEach((foto) => {
         const moldura = foto.parentElement;
 
-        // 1) Flutuar: sobe e desce devagar, sem parar.
-        //    Usa a propriedade "translate", que soma com o "transform" do efeito de inclinação.
-        foto.animate(
-            [
-                { translate: '0 0' },
-                { translate: '0 -14px' },
-                { translate: '0 0' }
-            ],
-            {
-                duration: 4000,
-                iterations: Infinity,
-                easing: 'ease-in-out',
-                delay: i * 600 // a foto do Sobre começa em outro ponto do ciclo
-            }
-        );
-
-        // 2) Inclinar 3D acompanhando o mouse
+        // O flutuar agora é feito no CSS (@keyframes flutuar).
+        // Aqui fica só a inclinação 3D acompanhando o mouse.
         foto.style.transition = 'transform 0.2s ease-out';
         foto.style.willChange = 'transform';
 
