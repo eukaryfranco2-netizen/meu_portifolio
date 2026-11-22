@@ -1,4 +1,4 @@
-/* ========== EFEITO DE DIGITAÇÃO (Typed.js) ========== */
+/* EFEITO DE DIGITAÇÃO (Typed.js) */
 if (typeof Typed !== 'undefined') {
     const typed = new Typed('.habilidades', {
         strings: ['Desenvolvedora Front-End', 'Desenvolvedora UI/UX'],
@@ -11,14 +11,14 @@ if (typeof Typed !== 'undefined') {
     console.warn('Typed.js não carregou: confira o <script> da biblioteca no index.html e a internet.');
 }
 
-/* ========== ANIMAÇÕES AO ROLAR (ScrollReveal) ========== */
+/* ANIMAÇÕES AO ROLAR (ScrollReveal) */
 if (typeof ScrollReveal !== 'undefined') {
     const scrollReveal = new ScrollReveal({
         distance: '80px',
         duration: 1000,
         delay: 150,
         reset: false,
-        cleanup: true // remove os estilos inline depois da animação, para o hover dos cards continuar funcionando
+        cleanup: true 
     });
 
     // Vêm de cima: saudação do hero e títulos das seções
@@ -42,34 +42,20 @@ if (typeof ScrollReveal !== 'undefined') {
     console.warn('ScrollReveal não carregou: confira o <script> da biblioteca no index.html e a internet.');
 }
 
-/* ========== ANIMAÇÕES DA FOTO ========== */
+/* ANIMAÇÕES DA FOTO */
+
 /* Os efeitos ficam na <img>, e o ScrollReveal na <div> que a envolve.
    Assim os dois não brigam pelo mesmo "transform". */
+
 const fotos = document.querySelectorAll('.foto-moldura img');
 const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Respeita quem desativou animações no sistema
+
 if (!reduzirMovimento) {
-    fotos.forEach((foto, i) => {
+    fotos.forEach((foto) => {
         const moldura = foto.parentElement;
 
-        // 1) Flutuar: sobe e desce devagar, sem parar.
-        //    Usa a propriedade "translate", que soma com o "transform" do efeito de inclinação.
-        foto.animate(
-            [
-                { translate: '0 0' },
-                { translate: '0 -14px' },
-                { translate: '0 0' }
-            ],
-            {
-                duration: 4000,
-                iterations: Infinity,
-                easing: 'ease-in-out',
-                delay: i * 600 // a foto do Sobre começa em outro ponto do ciclo
-            }
-        );
-
-        // 2) Inclinar 3D acompanhando o mouse
         foto.style.transition = 'transform 0.2s ease-out';
         foto.style.willChange = 'transform';
 

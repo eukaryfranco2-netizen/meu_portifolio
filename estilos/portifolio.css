@@ -1,4 +1,4 @@
-/* ========== RESET E VARIÁVEIS ========== */
+/* RESET E VARIÁVEIS */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ ul {
   padding: 0 24px;
 }
 
-/* ========== REUTILIZÁVEIS ========== */
+/* REUTILIZÁVEIS */
 .destaque {
   color: var(--dourado);
 }
@@ -100,7 +100,7 @@ ul {
   padding: 7px 18px;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -181,7 +181,7 @@ ul {
   color: var(--dourado);
 }
 
-/* ========== HERO ========== */
+/* HERO */
 .hero {
   padding: 170px 0 100px;
 }
@@ -214,7 +214,7 @@ ul {
   font-size: 1.9rem;
   font-weight: 400;
   margin-bottom: 18px;
-  min-height: 1.3em; /* evita o layout "pular" enquanto o texto é digitado */
+  min-height: 1.3em; 
 }
 
 .typed-cursor {
@@ -232,7 +232,7 @@ ul {
   flex-wrap: wrap;
 }
 
-/* ========== FOTO EM HEXÁGONO ========== */
+/* FOTO EM HEXÁGONO */
 /* O filter (brilho) fica no pai e o clip-path (recorte) na imagem:
    o clip-path corta qualquer sombra aplicada no próprio elemento. */
 .foto-moldura {
@@ -247,11 +247,24 @@ ul {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  background: var(--rosa);  /* aparece atrás de fotos com fundo transparente (PNG) */
-  clip-path: url(#hexagono-arredondado);  /* forma com pontas arredondadas, definida no SVG do index.html */
+  background: var(--rosa);  
+  clip-path: url(#hexagono-arredondado);  
+  animation: flutuar 6s ease-in-out infinite;  
 }
 
-/* ========== SOBRE ========== */
+/* A foto do Sobre começa no meio do ciclo (atraso negativo), para as duas não se mexerem juntas */
+.foto-sobre img {
+  animation-delay: -3s;
+}
+
+/* Flutuar só na vertical: sobe e desce, sem balançar para os lados.
+   Usa "translate" separado, para não brigar com o "transform" da inclinação do mouse (JS). */
+@keyframes flutuar {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -14px; }  /* altura máxima: aumente o número para subir mais */
+}
+
+/* SOBRE */
 .sobre {
   background: var(--fundo-escuro);
   padding: 100px 0;
@@ -277,7 +290,8 @@ ul {
   margin-bottom: 14px;
 }
 
-/* ========== SERVIÇOS ========== */
+/* SERVIÇOS */
+
 .servicos {
   padding: 100px 0;
 }
@@ -321,13 +335,15 @@ ul {
   color: #fff;
 }
 
-/* ========== ÚLTIMOS PROJETOS ========== */
+/* ÚLTIMOS PROJETOS */
+
 .projetos {
   background: var(--fundo-escuro);
   padding: 100px 0;
 }
 
 /* auto-fit: 3 colunas no desktop, ajusta sozinha em telas menores */
+
 .projetos-grade {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -393,7 +409,8 @@ ul {
   gap: 10px;
 }
 
-/* ========== FOOTER / CONTATO ========== */
+/* FOOTER / CONTATO  */
+
 .footer {
   padding: 90px 0 30px;
 }
@@ -429,7 +446,8 @@ ul {
   border-top: 1px solid rgba(255, 243, 220, 0.25);
 }
 
-/* ========== RESPONSIVO ========== */
+/* RESPONSIVO */
+
 @media (max-width: 1100px) {
   .logo {
     font-size: 2.1rem;
