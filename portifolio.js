@@ -56,6 +56,11 @@ if (!reduzirMovimento) {
     fotos.forEach((foto) => {
         const moldura = foto.parentElement;
 
+<<<<<<< HEAD
+=======
+        // O flutuar agora é feito no CSS (@keyframes flutuar).
+        // Aqui fica só a inclinação 3D acompanhando o mouse.
+>>>>>>> 7b678e5ff9988a90e3bb0dd30fa8af6745e3048f
         foto.style.transition = 'transform 0.2s ease-out';
         foto.style.willChange = 'transform';
 

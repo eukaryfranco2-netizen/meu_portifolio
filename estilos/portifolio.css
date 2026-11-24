@@ -247,9 +247,27 @@ ul {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+<<<<<<< HEAD
   background: var(--rosa);  
   clip-path: url(#hexagono-arredondado);  
   animation: flutuar 6s ease-in-out infinite;  
+=======
+  background: var(--rosa);  /* aparece atrás de fotos com fundo transparente (PNG) */
+  clip-path: url(#hexagono-arredondado);  /* forma com pontas arredondadas, definida no SVG do index.html */
+  animation: flutuar 6s ease-in-out infinite;  /* movimento suave e contínuo */
+}
+
+/* A foto do Sobre começa no meio do ciclo (atraso negativo), para as duas não se mexerem juntas */
+.foto-sobre img {
+  animation-delay: -3s;
+}
+
+/* Flutuar só na vertical: sobe e desce, sem balançar para os lados.
+   Usa "translate" separado, para não brigar com o "transform" da inclinação do mouse (JS). */
+@keyframes flutuar {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -14px; }  /* altura máxima: aumente o número para subir mais */
+>>>>>>> 7b678e5ff9988a90e3bb0dd30fa8af6745e3048f
 }
 
 /* A foto do Sobre começa no meio do ciclo (atraso negativo), para as duas não se mexerem juntas */
